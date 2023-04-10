@@ -1,7 +1,5 @@
 import inquirer from "inquirer";
-
-
-async function mainScreen(balance: Number){
+async function mainScreen(balance) {
     let askOption = await inquirer.prompt([
         {
             name: "menu",
@@ -10,8 +8,7 @@ async function mainScreen(balance: Number){
             message: "Please Select Your Transaction Type."
         }
     ]);
-
-    switch(askOption.menu){
+    switch (askOption.menu) {
         case "Balance Inquriy":
             console.log(`Your current balance is: ${balance}`);
             break;
@@ -29,10 +26,4 @@ async function mainScreen(balance: Number){
             break;
     }
 }
-
-
-
 export default mainScreen;
-
-
-

@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import users from "./users_database.js";
+import mainScreen from "./main_screen.js";
 
 
 async function login(){
@@ -19,7 +20,7 @@ async function login(){
     let user = users.find(x => x.accountNumber == askInfo.accountNumber && x.pin == askInfo.accountPin);
     if(typeof user != "undefined"){
         console.log(`Welcome ${user.name}`);
-        console.log(`Your Balance is: ${user.balance}`);
+        mainScreen(user.balance);
         
     } else{
         console.log("You Enter invalid pin or account number");        
