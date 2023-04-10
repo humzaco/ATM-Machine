@@ -12,6 +12,7 @@ async function otherAmountFun(balance: number) {
 
   if (askOtherAmount.otherAmount < balance) {
     balance -= askOtherAmount.otherAmount;
+    console.log(chalk.rgb(127, 174, 26)("Your Transction is Successful!!"));
   } else {
     console.log(chalk.rgb(195, 53, 25)("You have insufficient balance!"));
   }

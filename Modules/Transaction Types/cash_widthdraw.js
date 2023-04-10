@@ -29,6 +29,7 @@ async function cashWidthdarw(balance) {
         case "500":
             if (balance > askAmount.amount) {
                 balance -= 500;
+                console.log(chalk.rgb(127, 174, 26)("Your Transction is Successful!!"));
                 break;
             }
             else {

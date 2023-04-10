@@ -36,7 +36,6 @@ async function mainScreen(balance) {
                 break;
             case "Cash Widthdraw":
                 balance = await cashWidthdarw(balance);
-                console.log(chalk.rgb(127, 174, 26)("Your Transction is Successful!!"));
                 console.log(chalk.rgb(173, 132, 21)(`Your current balance is: ${balance}`));
                 break;
             case "Cash Deposit":
