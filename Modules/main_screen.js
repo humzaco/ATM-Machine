@@ -1,14 +1,15 @@
 import inquirer from "inquirer";
 import cashWidthdarw from "./Transaction Types/cash_widthdraw.js";
 import cashDeposit from "./Transaction Types/cash_deposit.js";
+import transfer from "./Transaction Types/transfer.js";
 async function anotherTransction() {
     let askQus = await inquirer.prompt([
         {
             name: "otherTransction",
             type: "list",
-            choices: ['Yes', 'No'],
-            message: "Do You Want Another Transction."
-        }
+            choices: ["Yes", "No"],
+            message: "Do You Want Another Transction.",
+        },
     ]);
     return askQus.otherTransction;
 }
@@ -43,13 +44,14 @@ async function mainScreen(balance) {
                 console.log(`Your current balance is: ${balance}`);
                 break;
             case "Tranfer":
-                console.log("Tranfer");
+                balance = await transfer(balance);
+                console.log(`Your current balance is: ${balance}`);
                 break;
             case "Exit":
                 console.log("Exit");
                 break;
         }
         var antran = await anotherTransction();
-    } while (antran == 'Yes');
+    } while (antran == "Yes");
 }
 export default mainScreen;
