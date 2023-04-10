@@ -51,10 +51,12 @@ async function mainScreen(balance: number) {
         console.log(`Your current balance is: ${balance}`);
         break;
       case "Exit":
-        console.log("Exit");
+        antran = "No";
         break;
     }
-    var antran = await anotherTransction();
+    if (askOption.menu !== "Exit") {
+      var antran = await anotherTransction();
+    }
   } while (antran == "Yes");
 }
 

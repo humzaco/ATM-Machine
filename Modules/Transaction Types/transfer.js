@@ -3,15 +3,15 @@ import users from "../users_database.js";
 async function transfer(balance) {
     let askamt = await inquirer.prompt([
         {
-            name: 'transferAcount',
-            type: 'number',
-            message: 'Enter Acount Number: '
+            name: "transferAcount",
+            type: "number",
+            message: "Enter Acount Number: ",
         },
         {
-            name: 'transferAmount',
-            type: 'number',
-            message: 'Enter Your Amount'
-        }
+            name: "transferAmount",
+            type: "number",
+            message: "Enter Your Amount",
+        },
     ]);
     let user = users.find((x) => x.accountNumber == askamt.transferAcount);
     if (typeof user != "undefined") {
