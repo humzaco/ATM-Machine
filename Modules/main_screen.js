@@ -1,4 +1,5 @@
 import inquirer from "inquirer";
+import cashWidthdarw from "./Transaction Types/cash_widthdraw.js";
 async function mainScreen(balance) {
     let askOption = await inquirer.prompt([
         {
@@ -13,7 +14,7 @@ async function mainScreen(balance) {
             console.log(`Your current balance is: ${balance}`);
             break;
         case "Cash Widthdraw":
-            console.log("Cash Widthdraw");
+            await cashWidthdarw(balance);
             break;
         case "Cash Deposit":
             console.log("Cash Deposit");
