@@ -28,7 +28,6 @@ async function cashWidthdarw(balance) {
         case "500":
             if (balance > askAmount.amount) {
                 balance -= 500;
-                console.log(`Your New Balance is: ${balance}`);
                 break;
             }
             else {
@@ -37,7 +36,6 @@ async function cashWidthdarw(balance) {
         case "1000":
             if (balance > askAmount.amount) {
                 balance -= 1000;
-                console.log(`Your New Balance is: ${balance}`);
                 break;
             }
             else {
@@ -46,7 +44,6 @@ async function cashWidthdarw(balance) {
         case "2000":
             if (balance > askAmount.amount) {
                 balance -= 2000;
-                console.log(`Your New Balance is: ${balance}`);
                 break;
             }
             else {
@@ -55,7 +52,6 @@ async function cashWidthdarw(balance) {
         case "5000":
             if (balance > askAmount.amount) {
                 balance -= 5000;
-                console.log(`Your New Balance is: ${balance}`);
                 break;
             }
             else {
@@ -64,7 +60,6 @@ async function cashWidthdarw(balance) {
         case "10000":
             if (balance > askAmount.amount) {
                 balance -= 10000;
-                console.log(`Your New Balance is: ${balance}`);
                 break;
             }
             else {
@@ -72,7 +67,6 @@ async function cashWidthdarw(balance) {
             }
         case "Other Amount":
             balance = await otherAmountFun(balance);
-            //   console.log(`Your New Balance is: ${balance}`);
             break;
     }
     return balance;
