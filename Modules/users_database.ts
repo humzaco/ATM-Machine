@@ -17,6 +17,18 @@ let users = [
     pin: 3456,
     balance: 19500,
   },
+  {
+    name: "Huzafa Ahmad",
+    accountNumber: 112236,
+    pin: 3457,
+    balance: 23500,
+  },
+  {
+    name: "Umer Aslam",
+    accountNumber: 112237,
+    pin: 3457,
+    balance: 9500,
+  },
 ];
 
 export default users;
