@@ -72,8 +72,9 @@ async function cashWidthdarw(balance) {
             }
         case "Other Amount":
             balance = await otherAmountFun(balance);
-            console.log(`Your New Balance is: ${balance}`);
+            //   console.log(`Your New Balance is: ${balance}`);
             break;
     }
+    return balance;
 }
 export default cashWidthdarw;

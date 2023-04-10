@@ -16,6 +16,6 @@ let users = [
         accountNumber: 112235,
         pin: 3456,
         balance: 19500,
-    }
+    },
 ];
 export default users;

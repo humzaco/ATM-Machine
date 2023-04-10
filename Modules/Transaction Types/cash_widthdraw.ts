@@ -32,7 +32,6 @@ async function cashWidthdarw(balance: number) {
     case "500":
       if (balance > askAmount.amount) {
         balance -= 500;
-        console.log(`Your New Balance is: ${balance}`);
         break;
       } else {
         console.log("You have insufficient balance!");
@@ -40,7 +39,6 @@ async function cashWidthdarw(balance: number) {
     case "1000":
       if (balance > askAmount.amount) {
         balance -= 1000;
-        console.log(`Your New Balance is: ${balance}`);
         break;
       } else {
         console.log("You have insufficient balance!");
@@ -48,7 +46,6 @@ async function cashWidthdarw(balance: number) {
     case "2000":
       if (balance > askAmount.amount) {
         balance -= 2000;
-        console.log(`Your New Balance is: ${balance}`);
         break;
       } else {
         console.log("You have insufficient balance!");
@@ -56,7 +53,6 @@ async function cashWidthdarw(balance: number) {
     case "5000":
       if (balance > askAmount.amount) {
         balance -= 5000;
-        console.log(`Your New Balance is: ${balance}`);
         break;
       } else {
         console.log("You have insufficient balance!");
@@ -64,16 +60,16 @@ async function cashWidthdarw(balance: number) {
     case "10000":
       if (balance > askAmount.amount) {
         balance -= 10000;
-        console.log(`Your New Balance is: ${balance}`);
         break;
       } else {
         console.log("You have insufficient balance!");
       }
     case "Other Amount":
       balance = await otherAmountFun(balance);
-      console.log(`Your New Balance is: ${balance}`);
       break;
   }
+
+  return balance;
 }
 
 export default cashWidthdarw;

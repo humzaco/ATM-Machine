@@ -6,15 +6,15 @@ async function login() {
         {
             name: "accountNumber",
             type: "number",
-            message: "Please Enter Your Account Number: "
+            message: "Please Enter Your Account Number: ",
         },
         {
             name: "accountPin",
             type: "password",
-            message: "Enter Your Pin Code: "
-        }
+            message: "Enter Your Pin Code: ",
+        },
     ]);
-    let user = users.find(x => x.accountNumber == askInfo.accountNumber && x.pin == askInfo.accountPin);
+    let user = users.find((x) => x.accountNumber == askInfo.accountNumber && x.pin == askInfo.accountPin);
     if (typeof user != "undefined") {
         console.log(`Welcome ${user.name}`);
         mainScreen(user.balance);
